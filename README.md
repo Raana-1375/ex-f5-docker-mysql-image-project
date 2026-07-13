@@ -49,14 +49,14 @@ Practice project: creating a Docker image and container with MySQL, managing a d
 
 ## Commands used
 
-\`\`\`bash
+```bash
 docker pull mysql:8.0-debian
 docker run --name pets-mysql-container -p 3307:3306 -e MYSQL_ROOT_PASSWORD=PetsProject123 -d mysql:8.0-debian
 docker tag mysql:8.0-debian raanaafkari/pets-mysql-image:1.0
 docker push raanaafkari/pets-mysql-image:1.0
-\`\`\`
+```
 
-\`\`\`sql
+```sql
 CREATE DATABASE pets_db;
 USE pets_db;
 
@@ -73,4 +73,4 @@ INSERT INTO pets (name, animal_type, breed, age) VALUES
 ('Luna', 'Gato', 'Siames', 3);
 
 SELECT * FROM pets;
-\`\`\`
+```
